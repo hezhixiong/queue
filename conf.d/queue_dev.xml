@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration version="1.0">
+  <appSettings>
+    <allowOrigin></allowOrigin>
+    <listen>:85</listen>
+    <!--
+      mode:
+      1 only publish
+      2 only subscribe
+      3 publish & subscribe
+    -->
+    <mode>3</mode>
+    <isDiscard>1</isDiscard>
+    <supportEmail>892741178@qq.com</supportEmail>
+  </appSettings>
+  <listenAndServe>
+    <port>:8030</port>
+    <logport>:8031</logport>
+  </listenAndServe>
+  <redisStore>
+    <addr>192.168.15:6379</addr>
+    <auth>password</auth>
+    <db>10</db>
+    <timeout>3</timeout> 
+  </redisStore>
+  <sqliteStore>
+    <driverName>sqlite3</driverName>
+    <filePath>./db/fw_queue.db</filePath>
+  </sqliteStore>
+</configuration>
